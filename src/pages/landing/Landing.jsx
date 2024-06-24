@@ -25,7 +25,6 @@ const Landing = ({ name }) => {
       {/* Main Landing Page */}
       <main className="landing container" style={styles.landing}>
         {/* Display the drawing component */}
-        <Draw />
 
         {/* Display the hero component */}
         <Hero name={name} />

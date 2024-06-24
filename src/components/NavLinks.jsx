@@ -18,7 +18,10 @@ const NavLinks = () => {
   return (
     <>
       {/* Menu toggle button */}
-      <button className="dropdown-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <button
+        className="dropdown-toggle"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
         {isMenuOpen ? (
           <img className="closeMenu" src={closeMenu} alt="Close" />
         ) : (
@@ -45,7 +48,7 @@ const NavLinks = () => {
         >
           {/* Portfolio link */}
           <NavLink to="/portfolio" onClick={() => setIsMenuOpen(false)}>
-            Portfolio
+            Projects
           </NavLink>
         </motion.div>
 

@@ -37,9 +37,9 @@ import PageNotFound from "./pages/404/PageNotFound";
 function App() {
   // Personal details for the user
   const personalDetails = {
-    name: "Michael Yeates",
-    location: "United Kingdom",
-    email: "michael-yeates@outlook.com",
+    name: "Ahmad Shahir Ahmadi",
+    location: "Canada",
+    email: "ahmadshahir013@gmail.com",
     brand:
       "My unique blend of technical expertise, creative thinking, and background in psychology allows me to approach each project with a deep understanding of the end user's perspective, resulting in highly effective user-centred digital products.",
   };
@@ -47,7 +47,7 @@ function App() {
   const location = useLocation();
 
   // State to manage loader visibility
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
 
   const [originalTitle, setOriginalTitle] = useState();
 
@@ -65,7 +65,7 @@ function App() {
     // Handle document title change when tab visibility changes
     const handleTabChange = () => {
       if (document.hidden) {
-        document.title = "👋🏻 Git pulling you back in!";
+        document.title = "Ahmad's Portfolio";
       } else {
         document.title = originalTitle;
       }
