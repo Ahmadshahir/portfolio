@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero";
-import Draw from "../../components/Draw";
+
 
 /**
  * Represents the Landing page component.

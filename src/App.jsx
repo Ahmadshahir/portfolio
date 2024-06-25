@@ -67,7 +67,7 @@ function App() {
       if (document.hidden) {
         document.title = "Ahmad's Portfolio";
       } else {
-        document.title = originalTitle;
+        document.title = "Ahmad's Portfolio";
       }
     };
 
