@@ -9,6 +9,10 @@ import Portfolio from "./pages/portfolio/Portfolio";
 import ProjectDetails from "./pages/portfolio/[project]/ProjectDetails";
 import Resume from "./pages/resume/Resume";
 import Contact from "./pages/contact/Contact";
+import AiLab from "./pages/ailab/AiLab";
+import DoodleLab from "./pages/ailab/doodle/DoodleLab";
+import EvolutionLab from "./pages/ailab/evolution/EvolutionLab";
+import ConnectFour from "./pages/ailab/connect4/ConnectFour";
 import PageNotFound from "./pages/404/PageNotFound";
 
 /**
@@ -90,6 +94,10 @@ function App() {
             <Route path="/" element={<Landing name={personalDetails.name} tagline={personalDetails.tagline} />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/resume" element={<Resume brand={personalDetails.brand} />} />
+            <Route path="/ai-lab" element={<AiLab />} />
+            <Route path="/ai-lab/doodle-brain" element={<DoodleLab />} />
+            <Route path="/ai-lab/evolution" element={<EvolutionLab />} />
+            <Route path="/ai-lab/connect-4" element={<ConnectFour />} />
 
             <Route
               path="/contact"

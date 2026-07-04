@@ -55,6 +55,17 @@ const NavLinks = () => {
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 2.25, duration: 0.5, type: "spring" }}
+        >
+          {/* AI Lab link */}
+          <NavLink to="/ai-lab" onClick={() => setIsMenuOpen(false)}>
+            AI Lab
+          </NavLink>
+        </motion.div>
+
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 2.2, duration: 0.5, type: "spring" }}
         >
           {/* Contact link */}
