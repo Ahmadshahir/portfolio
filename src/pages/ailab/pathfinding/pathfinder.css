@@ -1,0 +1,226 @@
+/* --- PATHFINDER --- */
+
+.pfToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px 25px;
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: var(--sm-spacing);
+  width: 100%;
+  max-width: 1100px;
+}
+
+.pfControl {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pfControl label {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+}
+
+.pfControl select {
+  background-color: #10161d;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  color: var(--text-color);
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pfControl select:focus {
+  outline: none;
+  border-color: var(--hl-color);
+}
+
+.pfControl input[type="range"] {
+  width: 120px;
+  accent-color: var(--hl-color);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.pfToggle {
+  display: flex;
+}
+
+.pfToggle button {
+  background-color: #10161d;
+  border: 1px solid var(--grey);
+  color: var(--secondary-text-color);
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pfToggle button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.pfToggle button:last-child {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+
+.pfToggle button.active {
+  background-color: var(--hl-color);
+  border-color: var(--hl-color);
+  color: #f9f9f9;
+}
+
+.pfButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pfButtons .labBtn {
+  margin-top: 0;
+}
+
+.pfButtons .labBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- GRID --- */
+
+.pfGridPanel {
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1100px;
+  overflow-x: auto;
+}
+
+.pfGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--pf-cols), 1fr);
+  gap: 1px;
+  min-width: 700px;
+  touch-action: none;
+  user-select: none;
+}
+
+.pfCell {
+  aspect-ratio: 1;
+  background-color: #10161d;
+  border-radius: 2px;
+  cursor: crosshair;
+}
+
+.pfCell.terrain {
+  background-color: #3d3a26;
+}
+
+.pfCell.wall {
+  background-color: #5a6b7d;
+  animation: popIn 0.15s ease-out;
+}
+
+.pfCell.visited {
+  background-color: #1c4a5e;
+  animation: floodIn 0.6s ease-out;
+}
+
+.pfCell.terrain.visited {
+  background-color: #3f5030;
+}
+
+.pfCell.path {
+  background-color: #f5c542;
+  animation: popIn 0.25s ease-out;
+}
+
+.pfCell.start {
+  background-color: var(--hl-color) !important;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+.pfCell.target {
+  background-color: var(--hl2-color) !important;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floodIn {
+  0% {
+    background-color: #48a3c6;
+    transform: scale(0.5);
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 2px;
+  }
+}
+
+/* --- RESULTS TABLE --- */
+
+.pfResults {
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: var(--sm-spacing);
+  margin-top: var(--sm-spacing);
+  width: 100%;
+  max-width: 1100px;
+}
+
+.pfTableWrap {
+  overflow-x: auto;
+}
+
+.pfTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 520px;
+}
+
+.pfTable th {
+  color: var(--secondary-text-color);
+  text-align: left;
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--grey);
+}
+
+.pfTable td {
+  color: var(--text-color);
+  padding: 10px 12px;
+  border-bottom: 1px solid #ffffff14;
+}
+
+.pfTable tr.current td {
+  color: var(--hl-color);
+  font-weight: 700;
+}

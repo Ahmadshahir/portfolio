@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaBrain, FaRocket, FaChessBoard } from "react-icons/fa";
+import { FaBrain, FaRocket, FaChessBoard, FaRoute } from "react-icons/fa";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 import "./ailab.css";
@@ -34,6 +34,15 @@ const EXPERIMENTS = [
     tags: ["Minimax", "Alpha-beta pruning", "Game theory"],
     accent: "#f5c542",
   },
+  {
+    path: "/ai-lab/pathfinder",
+    icon: <FaRoute />,
+    title: "Pathfinder",
+    tagline: "Watch search algorithms think",
+    body: "A*, Dijkstra, breadth-first, greedy and depth-first search racing over the same grid. Draw walls and rough terrain, generate mazes, and compare how each algorithm explores — cells expanded, path cost, time.",
+    tags: ["A* search", "Dijkstra", "Heuristics"],
+    accent: "#6cc551",
+  },
 ];
 
 /**
@@ -55,7 +64,7 @@ const AiLab = () => {
         <PageHeader title="AI Lab" description="Interactive AI experiments" />
 
         <p className="labIntro">
-          Three artificial intelligence projects, each implemented from scratch in JavaScript — no
+          Four artificial intelligence projects, each implemented from scratch in JavaScript — no
           ML libraries, no APIs, no server. Everything trains, evolves and searches live in your
           browser. Open the code to see exactly how each algorithm works.
         </p>

@@ -13,6 +13,7 @@ import AiLab from "./pages/ailab/AiLab";
 import DoodleLab from "./pages/ailab/doodle/DoodleLab";
 import EvolutionLab from "./pages/ailab/evolution/EvolutionLab";
 import ConnectFour from "./pages/ailab/connect4/ConnectFour";
+import Pathfinder from "./pages/ailab/pathfinding/Pathfinder";
 import PageNotFound from "./pages/404/PageNotFound";
 
 /**
@@ -98,6 +99,7 @@ function App() {
             <Route path="/ai-lab/doodle-brain" element={<DoodleLab />} />
             <Route path="/ai-lab/evolution" element={<EvolutionLab />} />
             <Route path="/ai-lab/connect-4" element={<ConnectFour />} />
+            <Route path="/ai-lab/pathfinder" element={<Pathfinder />} />
 
             <Route
               path="/contact"
