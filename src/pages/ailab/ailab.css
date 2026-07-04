@@ -1,0 +1,219 @@
+/* --- AI LAB (shared styles for the hub and all experiments) --- */
+
+.ailab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+
+.labIntro {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 2;
+  max-width: 760px;
+  margin-bottom: var(--spacing);
+  text-align: center;
+}
+
+.labIntro strong {
+  color: var(--text-color);
+}
+
+/* --- HUB CARDS --- */
+
+.labGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sm-spacing);
+  width: 100%;
+  max-width: 1100px;
+}
+
+.labCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: var(--sm-spacing);
+  transition: transform 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+.labCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.labIcon {
+  color: var(--accent);
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.labCardTitle {
+  color: var(--text-color);
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.labCardTagline {
+  color: var(--accent);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.labCardBody {
+  color: var(--secondary-text-color);
+  font-size: 13px;
+  line-height: 1.9;
+  flex: 1;
+}
+
+.labTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 15px 0;
+}
+
+.labTags .technology {
+  font-size: 11px;
+  margin-right: 0;
+}
+
+.labCardCta {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.labCard:hover .labCardCta {
+  color: var(--accent);
+}
+
+/* --- SHARED EXPERIMENT PANELS --- */
+
+.panelTitle {
+  color: var(--text-color);
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--hl-color);
+  padding-bottom: 5px;
+}
+
+.hint {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.labBtn {
+  margin-top: 15px;
+}
+
+.labBtn.secondary {
+  background-color: transparent;
+  border: 1px solid var(--hl-color);
+}
+
+.labBtn.small {
+  padding: 6px 16px;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.canvasActions {
+  display: flex;
+  gap: 10px;
+}
+
+.trainBtn {
+  width: 100%;
+  margin-top: var(--sm-spacing);
+}
+
+.trainBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.lossChart {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.lossChart canvas {
+  max-width: 100%;
+  background-color: #10161d;
+  border-radius: 6px;
+}
+
+.controlPanel {
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: var(--sm-spacing);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: var(--sm-spacing);
+}
+
+.stat {
+  background-color: #10161d;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  color: var(--hl-color);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.statLabel {
+  color: var(--secondary-text-color);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.howItWorks {
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: var(--sm-spacing);
+  margin-top: var(--sm-spacing);
+  max-width: 1100px;
+}
+
+.howItWorks p {
+  color: var(--secondary-text-color);
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 900px) {
+  .labGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

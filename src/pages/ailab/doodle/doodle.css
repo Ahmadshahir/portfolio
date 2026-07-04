@@ -1,0 +1,145 @@
+/* --- DOODLE BRAIN --- */
+
+.doodleLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sm-spacing);
+  width: 100%;
+}
+
+.drawPanel,
+.trainPanel,
+.predictPanel {
+  background-color: var(--bg2-color);
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  padding: var(--sm-spacing);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawCanvas {
+  background-color: #10161d;
+  border: 1px dashed var(--grey);
+  border-radius: 8px;
+  width: 280px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.trainPanel,
+.predictPanel {
+  align-items: stretch;
+}
+
+.classRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ffffff14;
+}
+
+.className {
+  color: var(--text-color);
+  font-weight: 700;
+  flex: 1;
+}
+
+.sampleCount {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.removeClass {
+  background: none;
+  border: none;
+  color: var(--hl2-color);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.addClassRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.addClassRow input {
+  flex: 1;
+  min-width: 0;
+  background-color: #10161d;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  color: var(--text-color);
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.addClassRow input:focus {
+  outline: none;
+  border-color: var(--hl-color);
+}
+
+.probRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.probLabel {
+  color: var(--secondary-text-color);
+  width: 90px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.probLabel.best {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.probTrack {
+  flex: 1;
+  height: 10px;
+  background-color: #10161d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.probFill {
+  height: 100%;
+  background-color: var(--grey);
+  border-radius: 5px;
+  transition: width 0.15s ease-out;
+}
+
+.probFill.best {
+  background-color: var(--hl-color);
+}
+
+.probValue {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  width: 38px;
+  text-align: right;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 900px) {
+  .doodleLayout {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    align-items: start;
+  }
+}
