@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bitget": {
+      "command": "npx",
+      "args": ["-y", "@bitget-ai/bitget-agent-mcp"],
+      "env": {
+        "BITGET_API_KEY": "${BITGET_API_KEY:-}",
+        "BITGET_SECRET_KEY": "${BITGET_SECRET_KEY:-}",
+        "BITGET_PASSPHRASE": "${BITGET_PASSPHRASE:-}"
+      }
+    }
+  }
+}
