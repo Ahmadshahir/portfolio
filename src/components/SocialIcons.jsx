@@ -26,6 +26,7 @@ const SocialIcons = () => {
         style={styles.icon}
         href="https://github.com/Ahmadshahir"
         target="_blank"
+        rel="noreferrer"
       >
         {/* GitHub Icon */}
         <motion.i
@@ -42,6 +43,7 @@ const SocialIcons = () => {
         style={styles.icon}
         href="https://www.linkedin.com/in/ahmad-shahir/"
         target="_blank"
+        rel="noreferrer"
       >
         {/* LinkedIn Icon */}
         <motion.i
@@ -58,6 +60,7 @@ const SocialIcons = () => {
         style={styles.icon}
         href="https://www.linkedin.com/in/ahmad-shahir/"
         target="_blank"
+        rel="noreferrer"
       >
         {/* Instagram Icon */}
         <motion.i
